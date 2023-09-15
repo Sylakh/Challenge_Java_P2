@@ -1,13 +1,14 @@
 package com.openclassrooms.store;
 
-public class Mouse {
+public class Mouse extends Item {
 
-    public String brand;
-    public double price;
+	public Mouse(Brand brand, double price) {
+		super(Brand, price);
+	}
 
-    public Mouse(String a, double b) {
-        this.brand = a; // Updating brand field
-        this.price = b; // Updating price field
-    }
+	@override
+	public String transformItenInToString() {
+		return "Mouse:{" + super.transformItemInToString() + "}";
+	}
 
 }
