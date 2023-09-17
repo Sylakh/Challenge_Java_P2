@@ -1,5 +1,6 @@
 package com.openclassrooms;
 
+import com.openclassrooms.store.Brand;
 import com.openclassrooms.store.Inventory;
 import com.openclassrooms.store.Mouse;
 import com.openclassrooms.store.Screen;
@@ -7,23 +8,23 @@ import com.openclassrooms.store.Screen;
 public class Main {
 
 	public static void main(String[] args) {
-    	
 
-    	Mouse dellMouse = new Mouse(Brand.DELL, 20.0);
-        Screen samsungScreen = new Screen(Brand.SAMSUNG, 150.0, "1920x1080");
+		Mouse dellMouse = new Mouse(20.0, Brand.DELL);
+		Screen samsungScreen = new Screen(150.0, Brand.SAMSUNG, "1920x1080");
 
-        Inventory inventory = new Inventory();
-        inventory.addItem(samsungScreen, 5);
+		Inventory inventory = new Inventory();
+		inventory.addItem(samsungScreen, 5);
 
-        inventory.addItem(dellMouse, 12);
-        inventory.removeItem(dellMouse, 2);
-        inventory.displayInventoryOnConsole();
+		inventory.addItem(dellMouse, 12);
+		inventory.removeItem(dellMouse, 2);
+		inventory.displayInventoryOnConsole();
 
-        inventory.removeItem(dellMouse, 12);
+		inventory.removeItem(dellMouse, 12);
 
-        inventory.displayInventoryOnConsole();
-        inventory.displayItemsOnConsole();
- }
+		inventory.displayInventoryOnConsole();
+		inventory.displayItemsOnConsole();
+	}
+}
 /**
  * System.out.println("Inventory POC");
  * 
